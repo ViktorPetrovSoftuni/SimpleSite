@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Demonstrator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    #demo-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #demo-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="demo-container">
+  <h2>Web Demonstrator</h2>
+  <p>This is a basic demonstration of CSS and JavaScript.</p>
+  <button id="demo-button">Click me!</button>
+</div>
+
+<script>
+  document.getElementById('demo-button').addEventListener('click', function() {
+    var container = document.getElementById('demo-container');
+    container.style.backgroundColor = '#ff6347'; // Change background color
+    container.style.color = '#fff'; // Change text color
+    container.innerHTML = '<h2>Changed!</h2><p>The button was clicked and the style and content were updated dynamically with JavaScript.</p>';
+  });
+</script>
+
+</body>
+</html>
